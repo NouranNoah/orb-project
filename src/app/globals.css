@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -16,19 +16,9 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+
+
 
 a {
   color: inherit;
@@ -39,4 +29,451 @@ a {
   html {
     color-scheme: dark;
   }
+} */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  /* background-color: rgba(240, 244, 248, 0.412); */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.close{
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: absolute;
+  inset-inline-end:10px;
+  transform: translateY(-50%);
+  top: 8px;
+}
+.close:hover{
+  color: rgb(191, 0, 0);
+}
+.submitBtn {
+  padding: 12px 24px;
+  background-color: #41A2EA;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 32%;
+}
+.submitBtn:hover:not(:disabled) {
+  background-color: #2d8cd4;
+}
+
+.submitBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.errorMsg{
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.errorContainer{
+  text-align: center;
+}
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.AuthContent{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  min-height: 100vh;
+  direction: rtl;
+}
+/* .AuthContent[dir="rtl"]{
+  flex-direction:row;
+} */
+
+
+.formAuth{
+  width: 50%;
+  padding: 0 30px;
+  margin-top: 3%;
+}
+.formLogin form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.formGroup{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.formGroup label {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea,
+.chooseimgProfile {
+    padding: 10px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    width: 100%;
+    background-color: rgba(240, 244, 248, 0.412);
+}
+
+.formGroup input:focus{
+    outline: none;
+    border-color: #41A2EA;
+}
+
+.formGroup input.error{
+    border-color: #ff0000;
+}
+.passInput{
+    position: relative;
+    width: 100%;
+}
+.passInput i{
+    position: absolute;
+    inset-inline-end:10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    font-size: 15px;
+}
+.passInput input {
+    padding-inline-end: 35px;
+}
+.formp{
+  color: #333;
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4 */
+/* verifycontent */
+.verifycontent{
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.head{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.head h1{
+    font-size: 40px;
+    line-height: 100%;
+    color: white;
+}
+.AuthContent h1{
+    font-size: 40px;
+    line-height: 100%;
+}
+.head p{
+    color: #d5d5d5;
+    font-size: 20px;
+    width: 80%;
+}
+.verifycontent img{
+    flex: 1;
+    height: 400px;
+    max-width: 100%;
+    object-fit: contain;
+}
+.allcenter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.otpInputs{
+    display: flex;
+    gap: 10px;
+    margin: 10% 0;
+    padding: 0;
+    direction: ltr;  
+}
+.otpInputs .otpInput{
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #F5F5F5;
+    border: none;
+    color: #2d8cd4;
+    font-weight: 600;
+    direction: ltr;  
+}
+.otpInputs .otpInput:focus{
+    outline: 2px solid #2d8cd4;
+}
+.errorContainer{
+    text-align: center;
+    color: rgb(221, 0, 0);
+}
+.head .resendContainer{
+    text-align: center;
+    padding-top: 5px;
+}
+.resendContainer p{
+    width: 100%;
+    font-size: 18px;
+}
+.resendContainer button{
+    color: #f9fcff;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    padding: 0 10px;
+}
+.resendContainer .DisresendBtn{
+    color: #666666;
+    cursor:text;
+}
+.head .resendContainer .resMsg{
+    font-size: 12px;
+}
+
+
+@media (max-width: 992px) {
+
+  .AuthContent{
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .formAuth{
+    width: 60%;
+    padding: 0 15px;
+  }
+
+  .verifycontent{
+    padding: 60px 20px;
+    gap: 20px;
+  }
+
+  .head h1{
+    font-size: 32px;
+  }
+
+  .head p{
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .verifycontent img{
+    display: none;
+  }
+  .AuthContent img{
+    display: none;
+  }
+
+  .otpInputs{
+    padding: 0 10%;
+  }
+
+  .otpInputs .otpInput{
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+
+  /* ===== Auth layout ===== */
+  .AuthContent{
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .formAuth{
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  /* ===== Verify content ===== */
+  .verifycontent{
+    flex-direction: column;
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  .verifycontent img{
+    height: 220px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .head h1{
+    font-size: 26px;
+  }
+
+  .head p{
+    font-size: 16px;
+    width: 100%;
+  }
+
+  /* ===== OTP ===== */
+  .otpInputs{
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+    gap: 8px;
+  }
+
+  .otpInputs .otpInput{
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  /* ===== Buttons ===== */
+  .submitBtn{
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  /* ===== Close icon ===== */
+  .close{
+    top: 12px;
+    inset-inline-end: 12px;
+  }
+}
+
+/* ///////////////////////3$$$$$$$$$$$$$$$$44444///////////// */
+.pagesContent{
+  padding: 30px 40px;
+  background-color: #fbfbff;
+}
+.pagesContent h2{
+  font-size: 30px;
+}
+.bg{
+    background-image: url("/images/bgloginn.png");
+    background-repeat:no-repeat;
+    background-size: cover;
+    justify-content:start;
+}
+.bg ,.bg label{
+  color: white;
+}
+.bgForm{
+  background-color: rgba(255, 255, 255, 0.214);
+  padding:3% 5%;
+  border-radius: 25px;
+  margin: 0 10%;
+}
+
+.lang{
+  width: 200px;
+  position: absolute;
+  padding: 1%;
+}
+.bgforget{
+  background-image: url("/images/bgForgott.png");
+  background-repeat:no-repeat;
+  background-size: cover;
+  justify-content:start;
+}
+.bgforget ,.bgforget label{
+  color: white;
+}
+.bgFormF{
+  background-color: rgba(255, 255, 255, 0.214);
+  padding:3%;
+  border-radius: 25px;
+  margin: 0 2%;
+  width: 45%;
+}
+.bgV{
+  background-image: url("/images/bgall.png");
+  background-repeat:no-repeat;
+  background-size: cover;
+  height:100vh;
+}
+.btnBox{
+    display: flex;
+    justify-content:center;
+    width: 100%;
+
+}
+@media (max-width: 992px) {
+  .bgforget,.bg{
+    background-image: none;
+  }
+  .bgFormF,.bgForm{
+    background-color: rgba(255, 255, 255, 0.214);
+    padding:4%;
+    width: 100%;
+    border: 1px solid #2d8cd4;
+}
+  .bgforget ,.bgforget label,.bg ,.bg label{
+    color: black;
+  } 
+}
+
+
+.noData{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #888;
+    font-size: 20px;
+    margin-top: 10%;
+}
+.noData p{
+    width: 50%;
+}
+.dataRow{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+
+.pageLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageLayout main {
+  flex: 1;
 }

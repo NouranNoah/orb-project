@@ -1,0 +1,480 @@
+/* SelectedUser */
+.selectBtn{
+    padding: 8px 20px;
+    border: none;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    color: #41A2EA;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0;
+    width: 120px;
+}
+.active {
+    background-color: #41A2EA;
+    color: #fff;
+}
+
+.selectBtns {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    gap: 30px;
+    border: 1px solid #ddd;
+    padding: 0px;
+    border-radius: 16px;
+    width: fit-content;
+}
+
+.signupContainer {
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: stretch; 
+    min-height: 100vh;
+}
+.signupContainer .signupContainerd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    flex: 1;
+}
+
+.signupContainerdd{
+    display: flex;
+    position: relative;
+}
+.signupContainerdd img{
+    width: 100%;   
+    border-start-start-radius: 50%;
+}
+
+.signupContainer h1 {
+    
+    color: #41A2EA;
+    margin-bottom: 20px;
+}
+
+/* ======================================================================== */
+/* ==================== form sign up =======================================*/
+.formAuth{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+}
+
+.formup{
+    width: 100%;
+    padding: 3% 5%;
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.iconsActive{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.iconsActive .iconActive{
+    color: #2d8cd4a2;
+}
+.iconsActive i{
+    color: #e0e0e0;
+    font-size: 10px;
+}
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+.rowinputs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap:30px;
+}
+.formGroup label {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea,
+.chooseimgProfile {
+    padding: 10px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    width: 100%;
+    
+    background-color: rgba(240, 244, 248, 0.412);
+}
+
+/* react-select (Teacher subjects multi-select) */
+.rs__control{
+    min-height: 44px;
+    border: 1.5px solid #ddd !important;
+    border-radius: 8px !important;
+    background-color: rgba(240, 244, 248, 0.412) !important;
+}
+.rs__control--is-focused{
+    border-color: #41A2EA !important;
+    box-shadow: none !important;
+}
+.rs__multi-value{
+    background-color: rgba(65, 162, 234, 0.15) !important;
+}
+.rs__multi-value__label{
+    color: #1f5f8a !important;
+    font-weight: 600;
+}
+.rs__multi-value__remove:hover{
+    background-color: rgba(65, 162, 234, 0.25) !important;
+    color: #1f5f8a !important;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #41A2EA;
+}
+
+.formGroup input.error,
+.formGroup select.error,
+.formGroup textarea.error {
+    border-color: #ff0000;
+}
+.passInput{
+    position: relative;
+    width: 100%;
+}
+.passInput i{
+    position: absolute;
+    inset-inline-end:10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    font-size: 15px;
+}
+.passInput input {
+    padding-inline-end: 35px;
+}
+
+.chooseimgProfile,.errorchooseimgProfile{
+    position: relative;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    border:1px dotted #888;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+.errorchooseimgProfile{
+    border:1px dotted #ff0000;
+}
+
+.chooseimgProfile div ,.errorchooseimgProfile div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(153, 153, 155);
+    gap: 5px;
+}
+.chooseimgProfile img,.errorchooseimgProfile img{
+    width: 100px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.fileInput{
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.errorText {
+    color: #ff0000;
+    font-size: 14px;
+}
+
+.checkboxGroup,.checkboxGroupError {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 3%;
+}
+.checkboxGroupError{
+    border: 1px solid #ff0000;
+}
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkboxLabel input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.subjectInput {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.subjectInput input {
+    flex: 1;
+}
+.passInput input{
+    margin-bottom: 0;
+}
+
+.addBtn,
+.removeBtn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+.subCenBtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+.addBtn{
+    border-radius: 50%;
+    width: fit-content;
+    padding: 6px 8px;
+    background-color: #41A2EA;
+    color: white;
+    margin-bottom: 3%;
+}
+
+
+.addBtn:hover {
+    background-color: #2d8cd4;
+}
+
+.removeBtn {
+    background-color: #ff4444;
+    color: white;
+}
+
+.removeBtn:hover {
+    background-color: #cc0000;
+}
+
+.buttonGroup{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap:30%;
+    padding: 10px 0;
+}
+
+.backBtn{
+    padding: 12px 24px;
+    color:#2d8cd4;
+    border: 1px solid #2d8cd4;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 30%;
+}
+.backBtn:hover{
+    background-color:#f0f0f0;
+}
+.btnBox{
+    display: flex;
+    justify-content:end;
+    width: 100%;
+}
+.errorMsg{
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.authTriImg{
+    width: 10%;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+.pdfPreview {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.pdfPreview i {
+    font-size: 30px;
+    color: #e63946;
+}
+.imgcontent{
+    position: "relative";
+    width: 100%;
+    height: 650px;
+}
+
+
+@media (max-width: 1024px) {
+    .signupContainerdd img{
+        display: none;
+    }
+}
+@media (max-width: 992px) {
+
+  .formAuth{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .selectBtns{
+    gap: 15px;
+  }
+
+  .selectBtn{
+    width: 110px;
+    font-size: 15px;
+  }
+
+  .buttonGroup{
+    gap: 20px;
+  }
+  
+  .formAuth .imgcontent{
+    width: 0;
+    height: 0;
+  }
+
+}
+@media (max-width: 992px) {
+
+  .formAuth{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .selectBtns{
+    gap: 15px;
+  }
+
+  .selectBtn{
+    width: 110px;
+    font-size: 15px;
+  }
+
+  .buttonGroup{
+    gap: 20px;
+  }
+
+}
+@media (max-width: 576px) {
+
+  /* container */
+  .signupContainer{
+    padding: 0 10px;
+    margin: 1% auto;
+  }
+  .signupContainer .signupContainerd{
+    margin-top: 10%;
+  }
+    .formup {
+        padding: 20px 0;
+    }
+  /* selected user buttons */
+  .selectBtns{
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .selectBtn{
+    width: 100%;
+  }
+
+  /* form layout */
+  .formAuth{
+    flex-direction: column;
+    gap: 0;
+  }
+  
+
+  .rowinputs{
+    flex-direction: column;
+  }
+
+  /* checkbox group */
+  .checkboxGroup,
+  .checkboxGroupError{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* buttons */
+  .buttonGroup{
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .backBtn{
+    width: 100%;
+  }
+
+  /* profile image uploader */
+  .chooseimgProfile,
+  .errorchooseimgProfile{
+    padding: 15px;
+    font-size: 15px;
+  }
+
+}
+.rowinputs > * {
+    flex: 1;
+    min-width: 220px;
+}

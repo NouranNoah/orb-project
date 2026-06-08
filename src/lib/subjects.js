@@ -1,0 +1,45 @@
+export const SUBJECTS_AR = [
+  "اللغة العربية",
+  "اللغة الإنجليزية",
+  "الرياضيات",
+  "العلوم (فيزياء – كيمياء – أحياء)",
+  "الدراسات الاجتماعية (تاريخ – جغرافيا)",
+  "التربية الدينية",
+  "التربية الرياضية",
+  "اللغة الفرنسية",
+  "التربية الوطنية",
+  "اللغة الأجنبية الثانية",
+  "البرمجة وعلوم الحاسب",
+  "الأحياء",
+  "الكيمياء",
+  "الفيزياء",
+  "رياضيات متقدمة",
+  "إحصاء",
+  "الفلسفة والمنطق",
+  "علم النفس والاجتماع",
+  "التاريخ",
+  "الجغرافيا",
+];
+
+export const SUBJECTS_EN = [
+  "Arabic Language",
+  "English Language",
+  "Mathematics",
+  "Integrated Science (Physics – Chemistry – Biology)",
+  "Social Studies (History – Geography)",
+  "Religious Education",
+  "Physical Education",
+  "French Language",
+  "Computer Science",
+  "English Language Arts",
+  "Mathematics (Algebra / Geometry / Calculus)",
+  "Science (Biology / Chemistry / Physics)",
+  "Social Studies",
+  "Foreign Languages",
+  "Computer / ICT",
+  "Physical Education",
+  "Art",
+];
+
+export const SUBJECTS_ALL = [...SUBJECTS_AR, ...SUBJECTS_EN];
+

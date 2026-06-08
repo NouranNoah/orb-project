@@ -1,0 +1,309 @@
+/* create Lesson Page */
+.createLesson{
+    display: flex;
+    
+    justify-content: space-between;
+}
+.formCreate{
+    width: 100%;
+    flex: 2;
+    padding: 2%;
+}
+.createLesson .cardImg{
+    flex: 0.6;
+    background-color: #41a1ea37;
+    height:unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.rowinputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+.timeDuration{
+    display: flex;
+    gap: 50px;
+    padding: 0 12%;
+}
+.timeDuration div{
+    background-color: #F5F5F3;
+    border-radius: 20px;
+    padding: 13px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.rowiBts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+.rowiBts button{
+    padding: 12px 24px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 20%;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.rowiBts .focusbtn1 i,.rowiBts .focusbtn2 i{
+    animation: pulse 1.8s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+.btn1{
+    background-color: rgb(194, 63, 63);
+}
+.btn2{
+    background-color:rgba(255, 109, 56, 0.814);
+}
+.btn1:hover{
+    background-color: rgb(165, 11, 11);
+}
+.focusbtn1{
+    background-color: rgb(165, 11, 11);
+}
+.focusbtn2{
+    background-color:rgb(255, 68, 0);
+}
+.btn2:hover{
+    background-color:rgb(255, 68, 0);
+}
+.timeDuration div:hover{
+    background-color: #41A2EA;
+    color: white;
+}
+.timeDuration .active{
+    background-color: #41A2EA;
+    color: white;
+}
+.bookIcon,.chatIcon,.chemiIcon,.lapIcon,.personIcon,.checkIcon,.grduIcon {
+    position: absolute;
+    font-size: 22px;
+    
+    background-color: #ffffffd3;
+    padding:1% 2%;
+    border-radius: 45px;
+    animation: float 4s ease-in-out infinite;
+    will-change: transform;
+}
+.grduIcon{
+    top: 10%;
+    right: 5%;
+    color: rgba(0, 0, 0, 0.677);
+}
+.chatIcon{
+    bottom: 10%;
+    right:10%;
+    color: #265BB1;
+}
+.lapIcon{
+    top:15%;
+    left: 10%;
+    color: gray;
+}
+.personIcon{
+    top:5%;
+    left: 40%;
+    color:steelblue;
+}
+.bookIcon{
+    top: 25%;
+    right: 35%;
+    color: darkred;
+}
+.chemiIcon{
+    bottom: 10%;
+    left: 10%;
+    color:tomato;
+}
+.checkIcon{
+    bottom: 20%;
+    left: 40%;
+    color:rgb(0, 141, 0);
+}
+
+
+
+.bookIcon:hover,
+.chatIcon:hover,
+.chemiIcon:hover,
+.lapIcon:hover,
+.personIcon:hover,
+.checkIcon:hover,
+.grduIcon:hover {
+    transform: scale(1.15) rotate(6deg);
+    transition: transform 0.3s ease;
+}
+
+.grduIcon { animation-duration: 3.5s; }
+.chatIcon { animation-duration: 4.2s; }
+.lapIcon { animation-duration: 5s; }
+.personIcon { animation-duration: 3.8s; }
+.bookIcon { animation-duration: 4.6s; }
+.chemiIcon { animation-duration: 5.2s; }
+.checkIcon { animation-duration: 3.9s; }
+
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.createLesson p{
+    margin-top: 5%;
+    background-color: rgba(240, 244, 248, 0.412);
+    padding: 5px 10px;
+    border-radius: 25px;
+    border: 1px solid #41A2EA;
+    width: fit-content;
+}
+
+.dateInput,
+.timeInput {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.cardImg img{
+    filter: brightness(1.1);
+}
+.errorInput {
+    border: 1.5px solid #e53935 !important;
+    background-color: #fff5f5;
+}
+.errorp{
+    color: #e53935 !important;
+}
+
+@media (max-width: 992px) {
+    .createLesson .cardImg{
+        display: none;
+    }
+}
+@media (max-width: 576px) {
+    .timeDuration{
+        gap: 15px;
+        padding: 0 1%;
+        flex-wrap: wrap;
+    }
+    .timeDuration div{
+        padding: 13px 5px;
+        width: 23%;
+    }
+    .rowiBts button{
+        width: 35%;
+    }
+}
+
+/* $$$$$$$$$$$$$$$$$$PopUp$$$$$$$$$$$$$$$$$$$$$ */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal {
+    background: white;
+    width: 420px;
+    max-width: 90%;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.iconWrapper {
+    font-size: 60px;
+    color: #41A2EA;
+    margin-bottom: 20px;
+}
+
+.modal h2 {
+    color: #265BB1;
+    margin-bottom: 10px;
+}
+
+.modal p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.primaryBtn {
+    background: linear-gradient(135deg,#41A2EA,#265BB1);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.secondaryBtn {
+    background: #f0f4ff;
+    color: #265BB1;
+    border: 1px solid #265BB1;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+}
+

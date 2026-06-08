@@ -1,0 +1,340 @@
+
+
+.teacherPage {
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #41a1ea, #265bb1);
+  padding: 60px 40px;
+  border-radius: 0 0 40px 40px;
+  color: white;
+}
+
+.heroContent {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.profileImageWrapper {
+  width: 220px;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 6px solid rgba(255,255,255,0.3);
+}
+
+.profileImageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroText h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.rating i {
+  color: #FFD700;
+}
+.subjects{
+    color: black;
+}
+
+
+/* INFO CARDS */
+.infoCards {
+  max-width: 1100px;
+  margin: -40px auto 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.infoCard,
+.priceCard {
+  background: white;
+  padding: 25px;
+  
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.priceCard {
+  background-color: white;
+  border: 1px solid #265bb1;
+  color: #265bb1;
+  text-align: center;
+}
+
+.priceCard h3 {
+  font-size: 28px;
+}
+
+.smallChip {
+  display: inline-block;
+  background: #e2e8f0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 5px 5px 0 0;
+  font-size: 12px;
+}
+
+/* Chips */
+.chip {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-right: 8px;
+  font-size: 13px;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profileCard {
+  flex: 2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.187);
+  border-radius: 20px;
+  padding: 20px 40px;
+  background-color: white;
+  height: 100%;
+}
+
+.profile-img {
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-bottom: 15px;
+}
+.profileImgContainer{
+    flex: 1;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.187);
+    border-radius: 20px;
+    padding: 20px ;
+    background-color: white;
+}
+.profileImgContainer img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.title {
+  opacity: 0.9;
+}
+
+.rating {
+  margin: 10px 0;
+}
+
+.primary-btn {
+  background: white;
+  color: #2563eb;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* ABOUT */
+.about {
+  margin-bottom: 50px;
+}
+
+.skills {
+  margin-top: 15px;
+}
+
+.skill {
+  display: inline-block;
+  background: #e5e7eb;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* COURSES */
+.courses {
+  margin-bottom: 50px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.course-img {
+  height: 150px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.price {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/* REVIEWS */
+.review-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    height: 300px;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Skeleton */
+.heroSkeleton {
+  height: 320px;
+  background: #e5e7eb;
+  animation: pulse 1.5s infinite;
+}
+
+.skeletonBlock {
+  height: 150px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  margin: 20px 0;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+/* Chips */
+.chipContainer {
+  margin-top: 5px;
+}
+
+.chip {
+  display: inline-block;
+  background: #e5e7eb;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin: 4px;
+  font-size: 13px;
+}
+
+.subjects {
+  margin: 10px 0;
+}
+
+/* Error */
+.errorBox {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* Empty */
+.emptyState {
+  padding: 20px;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* Review */
+.reviewCard {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.profileCard img{
+    width: 130px;
+}
+.infoSection{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+.infoSection .con{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.infoSection label{
+    font-weight: 600;
+}
+.infoSection label span{
+    font-weight: 400;
+}
+.infoSection .con span{
+    color: #2563eb;
+    font-weight: 600;
+}

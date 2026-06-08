@@ -1,0 +1,806 @@
+.page {
+  padding: 40px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+.grid
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sortSelect {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Layout */
+.content {
+  display: flex;
+  gap: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  height: fit-content;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.filterBox {
+  margin-bottom: 20px;
+}
+
+.filterBox label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* Grid */
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  border: 2px solid transparent;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  border-color: #2563eb;
+  transform: translateY(-4px);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTop img {
+  width: 90px;
+  height: 90px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.price {
+  color: #41A2EA;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.rating {
+  font-weight: bold;
+}
+.rating i {
+    color: #FFCE31;
+}
+
+.chooseBtn {
+  background: #41A2EA;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chooseBtn:hover {
+  background: #247bbe;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Overlay */
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+
+
+/* Modal */
+
+.modal {
+    position: relative;
+    width: 500px;
+    max-width: 95%;
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+
+    animation: modalFade 0.25s ease;
+}
+
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.modal h4 {
+    margin-top: 14px;
+    color: #333;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Close */
+
+.closeBtn {
+    position: absolute;
+    inset-inline-end: 15px;
+    top: 10px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #cecece;
+    transition: all 0.3s ease;
+}
+.closeBtn:hover{
+    color: #888;
+}
+
+
+/* Teacher */
+
+.modalTeacher {
+
+  display: flex;
+
+  gap: 15px;
+
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+.modalTeacher img {
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 12px;
+
+  object-fit: cover;
+}
+
+.modalPrice {
+
+  color: #3b82f6;
+
+  font-weight: bold;
+}
+
+.modalRating {
+
+  color: #f59e0b;
+}
+
+
+/* Lesson Info */
+
+.lessonInfo {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.lessonInfo i{
+    color: #41A2EA;
+    background-color: #41A2EA1A;
+    padding: 5px;
+    border-radius: 35px;
+}
+
+/* Counter */
+
+
+.counterInput {
+
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 8px;
+}
+
+.counterInput input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.counterInput input:focus{
+    outline: none;
+    border-color: #3b82f6;
+    background-color: #94d0ff1a;
+}
+.sendBtn {
+
+  background: #3b82f6;
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+
+/* Confirm */
+
+.confirmBtn {
+
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(90deg,#3b82f6,#2563eb);
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.confirmBtn:hover {
+
+  opacity: 0.9;
+}
+
+
+.noData{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #888;
+    font-size: 20px;
+    margin-top: 10%;
+}
+.noData p{
+    width: 50%;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+
+/* Skeleton Base */
+.skeletonCard {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeletonTitle,
+.skeletonText,
+.skeletonSmall,
+.skeletonButton,
+.skeletonAvatar {
+  background: linear-gradient(
+    90deg,
+    #eeeeee 25%,
+    #f5f5f5 37%,
+    #eeeeee 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+  border-radius: 6px;
+}
+
+/* Sizes */
+.skeletonTitle {
+  width: 140px;
+  height: 18px;
+  margin-bottom: 10px;
+}
+
+.skeletonText {
+  width: 100px;
+  height: 14px;
+  margin-bottom: 8px;
+}
+
+.skeletonSmall {
+  width: 50px;
+  height: 14px;
+}
+
+.skeletonButton {
+  width: 90px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+.skeletonAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+/* Smooth card appearance */
+.card {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fadeIn {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.4s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================= Negotiations ================= */
+
+.negoWrapper {
+  margin-top: 20px;
+}
+
+.negoTitle {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Messages List */
+.msgList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Message Item */
+.msgItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  animation: fadeUp 0.3s ease forwards;
+}
+
+.msgAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Bubble */
+.msgBubble {
+  background: #f5f6fa;
+  padding: 10px 14px;
+  border-radius: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.msgBubble:hover{
+    background-color: #f0f0f0;
+}
+
+.offerActions{
+    display: flex;
+    gap: 5px;
+}
+.offerActions button{
+    padding: 2px 4px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+}
+.offerActions button:first-child{
+    background-color: #c51c1c;
+}
+.offerActions button:first-child:hover{
+    background-color: #9f0909;
+}
+.offerActions button:last-child:hover{
+    background-color: #25a352;
+}
+.offerActions button:last-child{
+    background-color: #31ce6b;
+}
+.acceptedMsg {
+  background: #e8f9ee;
+  border: 1px solid #22c55e;
+  color: #15803d;
+}
+
+.rejectedMsg {
+  background: #ffecec;
+  border: 1px solid #ef4444;
+  color: #b91c1c;
+  text-decoration: line-through;
+}
+
+
+
+.msgText {
+  font-size: 14px;
+}
+
+/* Empty / Error */
+.noMsgs,
+.errorMsg {
+  text-align: center;
+  color: #888;
+  margin-top: 10px;
+}
+/* Scrollable container */
+.msgListScrollable {
+  max-height:150px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-right: 6px;
+}
+
+/* Scrollbar */
+.msgListScrollable::-webkit-scrollbar {
+  width: 6px;
+}
+.msgListScrollable::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+/* Message wrapper */
+.msgItem {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  animation: fadeUp 0.3s ease;
+}
+
+/* My message (right side) */
+.myMsg {
+  justify-content: flex-end;
+}
+
+.myMsg .msgBubble {
+  background: #41a1ea63;
+  cursor: default;
+}
+
+/* Other message (left side) */
+.otherMsg {
+  justify-content: flex-start;
+}
+
+/* Avatar */
+.msgAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+
+/* Name */
+.msgName {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Message text */
+.msgText {
+  font-size: 14px;
+}
+
+/* Time */
+.msgTime {
+  font-size: 11px;
+  opacity: 0.7;
+  display: block;
+  text-align: right;
+  margin-top: 4px;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================= Skeleton ================= */
+
+.msgSkeleton {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.skeletonAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  animation: pulse 1.4s infinite;
+}
+
+.skeletonBubble {
+  width: 180px;
+  height: 32px;
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    #eeeeee 25%,
+    #f5f5f5 37%,
+    #eeeeee 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+/* Animations */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.msgRow{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.PayOptions{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 5px 0;
+}
+.PayOptions button{
+  background-color: #F5F5F5;
+  border: 2px solid #9B9B9B;
+  border-radius: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.PayOptions button:hover{
+  background-color: #41A2EA1A;
+  border: 2px solid #41A2EA;
+}
+.PayOptions button:focus{
+  background-color: #41A2EA1A;
+  border: 2px solid #41A2EA;
+}
+.note{
+  font-size: 14px;
+  color: #265BB1;
+  font-weight: 400;
+  padding: 6px 8px;
+  border-radius: 16px;
+  background-color: #F5F5F5;
+}
+
+.acceptedBadge {
+background: #dcfce7;
+color: #166534;
+padding: 4px 8px;
+border-radius: 8px;
+font-size: 12px;
+margin-top: 5px;
+width: fit-content;
+}
+
+.rejectedBadge {
+background: #fee2e2;
+color: #991b1b;
+padding: 4px 8px;
+border-radius: 8px;
+font-size: 12px;
+margin-top: 5px;
+width: fit-content;
+}
+
+.acceptedToast {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0,0,0,.4);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 9999;
+animation: fadeIn .3s ease;
+}
+
+.toastBox {
+background: white;
+padding: 30px 25px;
+border-radius: 16px;
+text-align: center;
+width: 340px;
+animation: popupScale .35s ease;
+box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+.successIcon {
+font-size: 55px;
+color: #22c55e;
+margin-bottom: 15px;
+display: block;
+animation: bounceIn .5s ease;
+}
+
+.toastBox h4 {
+margin-bottom: 8px;
+font-size: 20px;
+font-weight: 600;
+}
+
+.toastBox p {
+color: #666;
+font-size: 14px;
+}
+
+.payBtn {
+margin-top: 20px;
+background: #22c55e;
+color: white;
+padding: 12px 20px;
+border-radius: 10px;
+border: none;
+cursor: pointer;
+font-size: 14px;
+transition: .3s;
+width: 100%;
+}
+
+.payBtn:hover {
+background: #16a34a;
+transform: translateY(-1px);
+}
+
+/* animations */
+
+@keyframes popupScale {
+0% {
+transform: scale(.7);
+opacity: 0;
+}
+100% {
+transform: scale(1);
+opacity: 1;
+}
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+@keyframes bounceIn {
+0% {
+transform: scale(.3);
+opacity: 0;
+}
+50% {
+transform: scale(1.1);
+}
+70% {
+transform: scale(.9);
+}
+100% {
+transform: scale(1);
+opacity: 1;
+}
+}

@@ -1,0 +1,278 @@
+.page {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* HERO */
+.heroCard {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.imageWrapper img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.heroInfo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.email {
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.meta span {
+  background: #f3f4f6;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+.meta span i{
+  margin-right: 5px;
+  color:#FFCE31;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: #e0f2fe;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.priceCard {
+  background: linear-gradient(135deg, #41A2EA, #3b82f6);
+  color: white;
+  padding: 20px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ABOUT */
+.about {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .heroCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.topActions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.languageSelector{
+  position: relative;
+}
+.editBtn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.editBtn:hover {
+  background: #3b82f6cc;
+}
+
+/* IMAGE WRAPPER */
+.imageWrapper {
+  position: relative;
+}
+
+.imageWrapper img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* SMALL EDIT ICON ON IMAGE */
+.imageEditBtn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.error{
+  text-align: center;
+  width: 100%;
+  color: rgb(210, 3, 3);
+}
+
+/* تغير الباس */
+.modalCard {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modalHeader h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+.modalHeader button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalBody input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.modalBody input:focus {
+  border-color: #5b7cfa;
+  box-shadow: 0 0 0 2px rgba(91, 124, 250, 0.1);
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel {
+  background: #f3f3f3;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.save {
+  background: #5b7cfa;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.save:hover {
+  background: #4a68e5;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/*  تغير اللغه */
+.topActions {
+  position: relative;
+}
+
+.langDropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  min-width: 150px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.langDropdown div {
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.langDropdown div:hover {
+  background: #f5f5f5;
+}

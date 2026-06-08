@@ -1,0 +1,42 @@
+.formAuthreset {
+    position: relative;
+    padding: 5% 0;
+    
+}
+.formAuthreset h1{
+    text-align: center;
+    padding-top: 2%;
+}
+.formAuthreset img{
+    position: absolute;
+    top: 10px;
+    /* inset-inline-start: 40%; */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bor{
+    border: 1px solid #3333334a;
+    padding: 32px;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.232);
+    border-radius: 8px;
+}
+
+.passInput{
+    position: relative;
+    width: 100%;
+}
+.passInput i{
+    position: absolute;
+    inset-inline-end:10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    font-size: 15px;
+}
+.passInput input {
+    padding-inline-end: 35px;
+}

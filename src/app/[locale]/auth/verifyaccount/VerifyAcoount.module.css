@@ -1,0 +1,72 @@
+.verifycontent{
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.head{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.head h1{
+    font-size: 40px;
+}
+.head p{
+    color: #666666;
+    font-size: 20px;
+    width: 80%;
+}
+.verifycontent img{
+    flex: 1;
+    height: 400px;
+}
+.otpInputs{
+    display: flex;
+    gap: 10px;
+    margin: 10% 0;
+    padding: 0 15%;
+    direction: ltr;  
+}
+.otpInputs .otpInput{
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #F5F5F5;
+    border: none;
+    color: #2d8cd4;
+    font-weight: 600;
+    direction: ltr;  
+}
+.otpInputs .otpInput:focus{
+    outline: 2px solid #2d8cd4;
+}
+.errorContainer{
+    text-align: center;
+    color: rgb(221, 0, 0);
+}
+.head .resendContainer{
+    text-align: center;
+    padding-top: 5px;
+}
+.resendContainer p{
+    width: 100%;
+    font-size: 18px;
+}
+.resendContainer button{
+    color: #2d8cd4;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    padding: 0 10px;
+}
+.resendContainer .DisresendBtn{
+    color: #666666;
+    cursor:text;
+}
+.head .resendContainer .resMsg{
+    font-size: 12px;
+}

@@ -1,0 +1,134 @@
+.footerContent {
+    background: linear-gradient(135deg,#06375d, #09347a, #002d8d, #020617);
+    color: #cbd5f5;
+    padding: 60px 6% 30px;
+    font-size: 15px;
+}
+
+.footerContent a {
+    color: #cbd5f5;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.footerContent a:hover {
+    color: #60a5fa;
+}
+
+/* ===== Top Section ===== */
+.footerContent > div:first-child {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footerContent img {
+    width: 120px;
+    margin-bottom: 5px;
+}
+
+.footerContent p {
+    line-height: 1.7;
+    color: #94a3b8;
+}
+
+
+/* ===== Titles ===== */
+.footerContent h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* ===== Links column ===== */
+.footerContent > div:first-child div:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ===== Social Icons ===== */
+.footerContent  div div  .iconsFooter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.footerContent i {
+    font-size: 16px;
+}
+
+.footerContent > div:first-child div:first-child > div {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.footerContent > div:first-child div:first-child > div i {
+    width: 38px;
+    height: 38px;
+    background-color: #FFFFFF33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.footerContent > div:first-child div:first-child > div i:hover {
+    background-color: #3b82f6;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* ===== Contact info ===== */
+.footerContent > div:first-child div:last-child div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #94a3b8;
+}
+
+/* ===== Bottom bar ===== */
+.footerContent > div:last-child {
+    border-top: 1px solid #1e293b;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.footerContent > div:last-child a {
+    margin: 0 5px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .footerContent > div:first-child {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .footerContent {
+        padding: 40px 20px 20px;
+        text-align: center;
+    }
+
+    .footerContent > div:first-child {
+        grid-template-columns: 1fr;
+    }
+
+    .footerContent > div:first-child div:last-child div {
+        justify-content: center;
+    }
+
+    .footerContent > div:last-child {
+        justify-content: center;
+        text-align: center;
+    }
+}

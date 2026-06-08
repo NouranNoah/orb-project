@@ -1,0 +1,24 @@
+.forgotPassword a {
+    color:white;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.noAcc{
+    text-align: center;
+    font-size: 15px;
+}
+.noAcc a{
+    color:#f4faff;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0 5px;
+}
+.btnBox{
+    display: flex;
+    justify-content:center;
+    width: 100%;
+}
+.btnBox button{
+    background-color: #095e9f;
+}

@@ -1,0 +1,151 @@
+.AuthContent{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.padd{
+  padding: 3%;
+}
+.formAuth{
+  width: 50%;
+  padding: 0 30px;
+  margin-top: 3%;
+}
+.formLogin form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.formGroup{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.formGroup label {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea,
+.chooseimgProfile {
+    padding: 10px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    width: 100%;
+    background-color: rgba(240, 244, 248, 0.412);
+}
+
+.formGroup input:focus{
+    outline: none;
+    border-color: #41A2EA;
+}
+
+.formGroup input.error{
+    border-color: #ff0000;
+}
+.passInput{
+    position: relative;
+    width: 100%;
+}
+.passInput i{
+    position: absolute;
+    inset-inline-end:10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    font-size: 15px;
+}
+.passInput input {
+    padding-inline-end: 35px;
+}
+.formp{
+  color: #333;
+  padding-top: 1%;
+  padding-bottom: 5%;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4 */
+/* verifycontent */
+.verifycontent{
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.head{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.head h1{
+    font-size: 40px;
+}
+.head p{
+    color: #666666;
+    font-size: 20px;
+    width: 80%;
+}
+.verifycontent img{
+    flex: 1;
+    height: 400px;
+}
+.otpInputs{
+    display: flex;
+    gap: 10px;
+    margin: 10% 0;
+    padding: 0 15%;
+    direction: ltr;  
+}
+.otpInputs .otpInput{
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #F5F5F5;
+    border: none;
+    color: #2d8cd4;
+    font-weight: 600;
+    direction: ltr;  
+}
+.otpInputs .otpInput:focus{
+    outline: 2px solid #2d8cd4;
+}
+.errorContainer{
+    text-align: center;
+    color: rgb(221, 0, 0);
+}
+.head .resendContainer{
+    text-align: center;
+    padding-top: 5px;
+}
+.resendContainer p{
+    width: 100%;
+    font-size: 18px;
+}
+.resendContainer button{
+    color: #2d8cd4;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    padding: 0 10px;
+}
+.resendContainer .DisresendBtn{
+    color: #666666;
+    cursor:text;
+}
+.head .resendContainer .resMsg{
+    font-size: 12px;
+}
