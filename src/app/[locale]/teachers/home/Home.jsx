@@ -6,7 +6,6 @@ import Cookies from "js-cookie";
 import styles from "./Home.module.css";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useImagePath } from "@/lib/useImagePath";
 import ExploreSection from "./ExploreSection";
 import TodayLessons from "./TodayLessons";
 import Link from "next/link";

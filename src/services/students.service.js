@@ -1,8 +1,6 @@
 import axiosInstance from "./axiosInstance";
 
-export const getFilterTeachers= (params = {})=>{
-    return axiosInstance.get('/teachers',{params})
-}
+
 export const paymentFunction= (lessonId) =>{
     return axiosInstance.post('/payments/create',{
         lessonId: lessonId,

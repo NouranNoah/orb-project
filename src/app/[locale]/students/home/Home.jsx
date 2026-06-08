@@ -7,7 +7,6 @@ import styles from "./Home.module.css";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import TopTeachers from "./TopTeachers";
-import { useImagePath } from "@/lib/useImagePath";
 import ExploreSection from "./ExploreSection";
 import TodayLessons from "./TodayLessons";
 import Link from "next/link";
@@ -42,7 +41,7 @@ export default function HomePage() {
                 height={115}
                 className={styles.arrow}
             /> */}
-            <Image src={locale=== 'en'? useImagePath('/images/homeStudentEN.png'):useImagePath('/images/homeStudentAR.png')} alt='homeImg'
+            <Image src={locale=== 'en'?    '/images/homeStudentEN.png': '/images/homeStudentAR.png'} alt='homeImg'
                 width={650}
                 height={235}
                 className={styles.imHead}

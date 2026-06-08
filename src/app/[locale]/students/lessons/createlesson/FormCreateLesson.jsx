@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { useImagePath } from '@/lib/useImagePath'
 import styles from '../lessons.module.css'
 import { useTranslations } from 'next-intl'
 import { CreateNewLesson } from '@/services/lessons.service'
@@ -260,7 +259,7 @@ export default function FormCreateLesson() {
         <div className={styles.lapIcon}><i className="fa-solid fa-laptop"></i></div>
         <div className={styles.personIcon}><i className="fa-solid fa-person-chalkboard"></i></div>
         <div className={styles.grduIcon}><i className="fa-solid fa-graduation-cap"></i></div>
-        <Image src={useImagePath("/images/imgCalenderr.png")} alt='image' width={250} height={450} />
+        <Image src={"/images/imgCalenderr.png"} alt='image' width={250} height={450} />
         <div className={styles.chatIcon}><i className="fa-solid fa-comment-dots"></i></div>
         <div className={styles.chemiIcon}><i className="fa-solid fa-flask-vial"></i></div>
         <div className={styles.checkIcon}><i className="fa-solid fa-circle-check"></i></div>

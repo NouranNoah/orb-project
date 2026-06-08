@@ -6,7 +6,6 @@ import styles from "./Header.module.css";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useImagePath } from "@/lib/useImagePath"; 
 import Cookies from "js-cookie";
 import { onMessage } from "firebase/messaging";
 import { getFirebaseMessaging } from "@/lib/firebase";
@@ -22,8 +21,8 @@ export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [roleUser, setRoleUser] = useState(null);
     const [unreadCount, setUnreadCount] = useState(0);    
-    const logoPath = useImagePath("/logo.svg");
-    const avatarPath = useImagePath("/images/37.jpg");
+    const logoPath = "/logo.svg";
+    const avatarPath = "/images/37.jpg";
 
     useEffect(() => {
         const role = Cookies.get("roleUser");

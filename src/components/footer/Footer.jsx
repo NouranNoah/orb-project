@@ -4,7 +4,7 @@ import styles from './Footer.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import { useImagePath } from '@/lib/useImagePath'
+// import { useImagePath } from '@/lib/useImagePath'
 
 export default function Footer() {
     const t = useTranslations('footer')
@@ -15,7 +15,7 @@ export default function Footer() {
 
                 {/* Logo + Description */}
                 <div>
-                    <Image src={useImagePath("/images/logo.png")} alt='logo' width={140} height={80} />
+                    <Image src="/images/logo.png" alt='logo' width={140} height={80} />
                     <p>{t('description')}</p>
 
                     <div className={styles.iconsFooter} style={{flexDirection:"row"}}>

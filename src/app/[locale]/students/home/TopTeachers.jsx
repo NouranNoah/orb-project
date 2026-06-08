@@ -5,7 +5,6 @@ import styles from "./Home.module.css";
 import { useEffect, useState, useRef } from 'react';
 import { getFilterTeachers } from '@/services/teachers.service';
 import Image from 'next/image';
-import { useImagePath } from '@/lib/useImagePath';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -17,7 +16,7 @@ export default function TopTeachers() {
     const pathname = usePathname();
     const locale = pathname.split('/')[1] || 'ar';
 
-    const defaultImg = useImagePath('/images/defultImg.jpg');
+    const defaultImg = '/images/defultImg.jpg';
 
     useEffect(() => {
         (async () => {
