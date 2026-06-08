@@ -5,8 +5,13 @@ const withNextIntl = createNextIntlPlugin('./i18n.js');
 const nextConfig = {
   transpilePackages: ['zego-express-engine-webrtc'],
   images: {
-    domains: ['res.cloudinary.com'], 
-  },
+  remotePatterns: [
+    {
+      protocol: 'https',
+      hostname: 'res.cloudinary.com',
+    },
+  ],
+},
 };
 
 export default withNextIntl(nextConfig);

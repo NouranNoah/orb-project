@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useParams, useSearchParams, useRouter, usePathname } from "next/navigation";
-import { ZegoExpressEngine } from "zego-express-engine-webrtc"; 
+// import { ZegoExpressEngine } from "zego-express-engine-webrtc"; 
 import Cookies from "js-cookie";
 import styles from './Meeting.module.css';
 // استيراد الأيقونات
@@ -43,7 +43,7 @@ export default function Meeting() {
     
     const envAppId = Number(process.env.NEXT_PUBLIC_ZEGO_APP_ID);
     const appID = !Number.isNaN(envAppId) && envAppId ? envAppId : 1202786457;
-    const zg = new ZegoExpressEngine(appID, "wss://webliveroom-api.zegocloud.com/ws");
+    // const zg = new ZegoExpressEngine(appID, "wss://webliveroom-api.zegocloud.com/ws");
     engineRef.current = zg;
     
     zg.on("roomStreamUpdate", async (roomID, updateType, streamList) => {
