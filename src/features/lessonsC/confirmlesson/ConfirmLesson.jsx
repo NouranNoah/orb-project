@@ -81,8 +81,13 @@ export default function ConfirmLesson({role}) {
             }
 
         }catch(err){
-            console.log(err);
-            setErrorMsg(t("failsubmit"))
+            console.error("sendCompletion error:", err, err?.response?.status, err?.response?.data);
+            const status = err?.response?.status;
+            if(status === 403){
+                setErrorMsg(t("forbiddenError") || `Request failed with status ${status}`)
+            } else {
+                setErrorMsg(t("failsubmit") )
+            }
         }finally{
             setLoading(false);
         }

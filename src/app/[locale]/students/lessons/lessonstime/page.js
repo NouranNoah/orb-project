@@ -1,59 +1,31 @@
 'use client'
-import React, { useState } from 'react'
-import { useTranslations } from 'next-intl'
+import React, { Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 import styles from './lessontime.module.css'
 
 import UpcomingLessons from './upcoming/UpcomingLessons'
 import CompletedLessons from './completed/CompletedLessons'
 import ProblemLessons from './issues/ProblemLessons'
 
-export default function LessonsTimePage() {
-
-  const t = useTranslations("lessonstimepage")
-
-  const [activeTab, setActiveTab] = useState("upcoming")
+function LessonsContent() {
+  const searchParams = useSearchParams()
+  const activeTab = searchParams.get('tab') || 'upcoming'
 
   return (
+    <div className={styles.content}>
+      {activeTab === "upcoming" && <UpcomingLessons />}
+      {activeTab === "completed" && <CompletedLessons />}
+      {activeTab === "problem" && <ProblemLessons />}
+    </div>
+  )
+}
+
+export default function LessonsTimePage() {
+  return (
     <div className={styles.page}>
-
-      {/* Tabs */}
-      <div className={styles.tabs}>
-
-        <button
-          className={activeTab === "upcoming" ? styles.active : ""}
-          onClick={() => setActiveTab("upcoming")}
-        >
-          {t("b1")}
-        </button>
-
-        <button
-          className={activeTab === "completed" ? styles.active : ""}
-          onClick={() => setActiveTab("completed")}
-        >
-          {t("b2")}
-        </button>
-
-        <button
-          className={activeTab === "problem" ? styles.active : ""}
-          onClick={() => setActiveTab("problem")}
-        >
-          {t("b3")}
-        </button>
-
-      </div>
-
-
-      {/* Content */}
-      <div className={styles.content}>
-
-        {activeTab === "upcoming" && <UpcomingLessons />}
-
-        {activeTab === "completed" && <CompletedLessons />}
-
-        {activeTab === "problem" && <ProblemLessons />}
-
-      </div>
-
+      <Suspense fallback={<div>Loading...</div>}>
+        <LessonsContent />
+      </Suspense>
     </div>
   )
 }

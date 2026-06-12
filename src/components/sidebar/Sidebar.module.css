@@ -1,0 +1,156 @@
+/* Sidebar.module.css */
+.sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  border-inline-end: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 100;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.brandName {
+  padding-top: 5px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+  gap: 8px;
+  flex: 1;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 15px;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.navLink i {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.navLink:hover {
+  background-color: rgba(65, 162, 234, 0.1);
+  color: #41A2EA;
+}
+
+.active {
+  background-color: #41A2EA;
+  color: #ffffff !important;
+}
+
+.active i {
+  color: #ffffff;
+}
+
+.activeParent {
+  color: #41A2EA;
+  font-weight: 600;
+}
+.activeParent i {
+  color: #41A2EA;
+}
+
+.navGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.subMenu {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 40px; /* Indent sub items */
+  padding-top: 5px;
+  gap: 5px;
+}
+
+.subLink {
+  text-decoration: none;
+  color: #777;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.subLink::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.subLink:hover {
+  color: #41A2EA;
+  background-color: rgba(65, 162, 234, 0.05);
+}
+
+.subLink:hover::before {
+  background-color: #41A2EA;
+}
+
+.subActive {
+  color: #41A2EA;
+  font-weight: bold;
+}
+.subActive::before {
+  background-color: #41A2EA;
+}
+
+/* Mobile Overlay & Drawer */
+.overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    inset-inline-start: -270px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .sidebar.open {
+    inset-inline-start: 0;
+  }
+
+  .overlay.open {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 90;
+  }
+}

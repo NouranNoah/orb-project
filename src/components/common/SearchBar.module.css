@@ -1,0 +1,37 @@
+.searchContainer {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.searchContainer i {
+  position: absolute;
+  inset-inline-start: 15px;
+  color: #888;
+  font-size: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.searchContainer input {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border: 1px solid #eaeaea;
+  border-radius: 25px;
+  background-color: #fff;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+/* For RTL */
+[dir="rtl"] .searchContainer input {
+  padding: 12px 40px 12px 15px;
+}
+
+.searchContainer input:focus {
+  border: 1px solid #41A2EA;
+  outline: none;
+  box-shadow: 0 4px 15px rgba(65, 162, 234, 0.15);
+}

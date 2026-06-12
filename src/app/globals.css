@@ -477,3 +477,30 @@ body {
 .pageLayout main {
   flex: 1;
 }
+
+/* ===== Dashboard Layout ===== */
+.dashboardLayout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.dashboardMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Prevents overflow */
+  transition: all 0.3s ease;
+}
+
+.dashboardContent {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .dashboardContent {
+    padding: 10px;
+  }
+}

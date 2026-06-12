@@ -10,6 +10,7 @@ import TopTeachers from "./TopTeachers";
 import ExploreSection from "./ExploreSection";
 import TodayLessons from "./TodayLessons";
 import Link from "next/link";
+import SearchBar from "@/components/common/SearchBar";
 
 export default function HomePage() {
     const t = useTranslations("homeStudent");
@@ -47,6 +48,7 @@ export default function HomePage() {
                 className={styles.imHead}
             />
         </div>
+        <SearchBar />
         <TopTeachers />
         <ExploreSection />
         <TodayLessons />

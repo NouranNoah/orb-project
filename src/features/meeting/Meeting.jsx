@@ -35,6 +35,34 @@ export default function Meeting() {
   const userRole = Cookies.get("roleUser")
   const userName = userRole === "teacher" ? "Teacher_User" : "Student_User";
 
+  // Filter noisy ZegoExpressLogger logs in the console while in this component
+  useEffect(() => {
+    const origLog = console.log;
+    const origInfo = console.info;
+    const origWarn = console.warn;
+
+    const zegoFilter = (arg) => {
+      if (typeof arg !== "string") return false;
+      return arg.includes("ZegoExpressLogger") || /"action":"zs\./.test(arg);
+    };
+
+    console.log = (...args) => {
+      if (!args.some(zegoFilter)) origLog.apply(console, args);
+    };
+    console.info = (...args) => {
+      if (!args.some(zegoFilter)) origInfo.apply(console, args);
+    };
+    console.warn = (...args) => {
+      if (!args.some(zegoFilter)) origWarn.apply(console, args);
+    };
+
+    return () => {
+      console.log = origLog;
+      console.info = origInfo;
+      console.warn = origWarn;
+    };
+  }, []);
+
   useEffect(() => {
     const rtcToken =
       normalizeZegoKitTokenFromUrl(sessionStorage.getItem(meetingTokenStorageKey(meetingId))) ||
@@ -67,7 +95,7 @@ export default function Meeting() {
           const localStream = await zg.createStream({
             camera: { video: true, audio: true }
           });
-          
+
           localStreamRef.current = localStream; // حفظ الاستريم للتحكم به لاحقاً
 
           if (localVideoRef.current) {
@@ -78,7 +106,20 @@ export default function Meeting() {
           await zg.startPublishingStream(streamID, localStream);
 
         } catch (mediaError) {
-          setInitError(t("failCam"));
+          console.error("Zego createStream error:", mediaError);
+          // محاولة fallback إلى واجهة المتصفح مباشرة
+          try {
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) throw new Error("getUserMedia not available");
+            const nativeStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+            localStreamRef.current = nativeStream;
+            if (localVideoRef.current) localVideoRef.current.srcObject = nativeStream;
+            const nativeStreamID = `stream_native_${userId}_${Date.now()}`;
+            await engineRef.current.startPublishingStream(nativeStreamID, nativeStream);
+            console.info("Publishing native MediaStream as fallback");
+          } catch (nativeErr) {
+            console.error("Native getUserMedia fallback error:", nativeErr);
+            setInitError(`${t("failCam")} - ${mediaError?.message || nativeErr?.message || mediaError}`);
+          }
         }
 
       } catch (err) {

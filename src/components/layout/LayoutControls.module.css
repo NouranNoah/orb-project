@@ -1,0 +1,65 @@
+.floatingNotification {
+  position: fixed;
+  bottom: 30px;
+  inset-inline-start: 30px;
+  width: 55px;
+  height: 55px;
+  background-color: #41A2EA;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 100;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.floatingNotification:hover {
+  transform: scale(1.1);
+  background-color: #2d8cd4;
+}
+
+.floatingNotification i {
+  color: white;
+}
+
+.badge {
+  position: absolute;
+  top: -2px;
+  inset-inline-end: -2px;
+  background: #ff4757;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 12px;
+  border: 2px solid #fff;
+}
+
+.floatingHamburger {
+  position: fixed;
+  top: 15px;
+  inset-inline-start: 15px;
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 80;
+  border: 1px solid #eaeaea;
+  cursor: pointer;
+}
+
+@media (min-width: 769px) {
+  .floatingHamburger {
+    display: none;
+  }
+}
